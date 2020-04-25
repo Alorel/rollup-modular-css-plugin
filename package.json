@@ -46,7 +46,8 @@
   },
   "dependencies": {
     "@rollup/pluginutils": "^3.0.9",
-    "magic-string": "^0.25.7"
+    "magic-string": "^0.25.7",
+    "unique-slug": "^2.0.2"
   },
   "publishConfig": {
     "access": "public",
