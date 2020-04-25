@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.0.0...1.1.0) (2020-04-25)
+
+
+### Features
+
+* made makeStyleId function public ([](https://github.com/Alorel/rollup-modular-css-plugin/commit/4820e33597c0c7587f9c8ec59400e2e60e334e6e))
+
+
+### Refactoring
+
+* generate shorter style IDs ([](https://github.com/Alorel/rollup-modular-css-plugin/commit/e526c0d5e304b184858d14a046f99d8e5cbab25e))
+
 # 1.0.0 (2020-04-25)
 
 
