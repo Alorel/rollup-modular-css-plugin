@@ -10,3 +10,4 @@ export {
 } from './exporter';
 
 export {Exports} from './lib/processor-types';
+export {makeStyleId} from './lib/makeStyleId';
