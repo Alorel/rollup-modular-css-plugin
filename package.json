@@ -1,6 +1,6 @@
 {
   "name": "@alorel/rollup-plugin-modular-css",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Modular CSS loader plugin",
   "main": "index.js",
   "module": "esm/index.js",
