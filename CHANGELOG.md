@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.1.0...1.1.1) (2020-04-25)
+
+
+### Bug Fixes
+
+* Removed unused prod dependency ([](https://github.com/Alorel/rollup-modular-css-plugin/commit/e28d1b5323b550f9ab1c89d6a12e58b0cba3bef1))
+
 # [1.1.0](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.0.0...1.1.0) (2020-04-25)
 
 
