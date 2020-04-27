@@ -11,9 +11,7 @@ if (typeof document !== 'undefined') {
     var style = document.createElement('style');
     style.id = id;
     style.innerText = contents;
-    setTimeout(function appendStyleToDom() {
-      document.head.appendChild(style);
-    });
+    document.head.appendChild(style);
   };
 } else {
   loadStyle = function loadStyle() {
