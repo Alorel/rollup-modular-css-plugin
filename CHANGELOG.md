@@ -1,3 +1,15 @@
+## [1.1.2](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.1.1...1.1.2) (2020-04-27)
+
+
+### Bug Fixes
+
+* loadStyle now operates synchronously ([](https://github.com/Alorel/rollup-modular-css-plugin/commit/7f48faf9a9b0b20d7660d6e9739507f5b282675d))
+
+
+### Maintenance
+
+* Remove unused code ([](https://github.com/Alorel/rollup-modular-css-plugin/commit/a42511ffce3661239be76b55d729a08fa5cb9e6a))
+
 ## [1.1.1](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.1.0...1.1.1) (2020-04-25)
 
 
