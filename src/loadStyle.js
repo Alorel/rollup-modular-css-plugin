@@ -1,5 +1,3 @@
-// ========== BEGIN loadStyle INIT BLOCK ==========
-
 var loadStyle;
 
 if (typeof document !== 'undefined') {
@@ -19,5 +17,3 @@ if (typeof document !== 'undefined') {
 }
 
 export {loadStyle};
-
-// ========== END loadStyle INIT BLOCK ==========
