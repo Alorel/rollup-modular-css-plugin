@@ -1,4 +1,6 @@
 import {createFilter} from '@rollup/pluginutils';
+import {camelCase} from 'lodash';
+import {relative} from 'path';
 import {Plugin, PluginContext, TransformPluginContext, TransformResult} from 'rollup';
 import {CommonOptions} from './lib/CommonOptions';
 import {DEFAULT_INCLUDE_REGEX, EXPORTER_PLUGIN_NAME} from './lib/constants';
@@ -8,6 +10,8 @@ import {lazyValue} from './lib/lazy-value';
 import {makeStyleId} from './lib/makeStyleId';
 import {resolveBaseImportString} from './lib/resolveBaseImportString';
 import {ModularCssProcessorPlugin} from './processor';
+
+const regVarName = /^[a-z\d_]+$/i;
 
 interface Options extends CommonOptions {
   /** @default false */
@@ -30,6 +34,12 @@ interface Options extends CommonOptions {
    * @default null
    */
   styleImportName?: string | null | false;
+
+  /**
+   * Warn on CSS rule names that aren't valid JS identifiers
+   * @default false
+   */
+  warnOnInvalidNames?: boolean;
 }
 
 function modularCssExporterPlugin(pluginOptions: Options = {}): Plugin {
@@ -39,6 +49,7 @@ function modularCssExporterPlugin(pluginOptions: Options = {}): Plugin {
     preferConst = false,
     pureLoadStyle = true,
     sourceMap = true,
+    warnOnInvalidNames = false,
     styleExportName = null,
     styleImportName = null
   } = pluginOptions;
@@ -86,9 +97,14 @@ function modularCssExporterPlugin(pluginOptions: Options = {}): Plugin {
 
       const fileExports = Object.entries(mainPlugin.exportsByFile[id] || {});
       if (fileExports.length) {
-        for (const [key, exportArray] of fileExports) {
+        for (let [key, exportArray] of fileExports) {
           if (exportArray.length !== 1) {
             this.error(`More than one export for ${key} found in ${id}: ${exportArray.join(', ')}`);
+          }
+          if (!regVarName.test(key)) {
+            const camelCased = camelCase(key);
+            warnOnInvalidNames && this.warn(`${key} in ${relative(process.cwd(), id)} camelCased to ${camelCased}`);
+            key = camelCased;
           }
           lines.push(`export ${exportVarName} ${key} = ${JSON.stringify(exportArray[0])};`);
         }
