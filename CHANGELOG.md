@@ -1,3 +1,16 @@
+## [1.1.3](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.1.2...1.1.3) (2020-05-10)
+
+
+### Bug Fixes
+
+* Handle invalid var names properly ([637bd3c](https://github.com/Alorel/rollup-modular-css-plugin/commit/637bd3cbafef21fb59b451b7df1d7e71662f2207))
+
+
+### Maintenance
+
+* tweak registry url ([e8a466d](https://github.com/Alorel/rollup-modular-css-plugin/commit/e8a466d621120d874342652a121a3e92d6e7d0e8))
+* Update deps ([5867513](https://github.com/Alorel/rollup-modular-css-plugin/commit/586751377f1e47b87b28a3a1e22585c8f5cdbcc8))
+
 ## [1.1.2](https://github.com/Alorel/rollup-modular-css-plugin/compare/1.1.1...1.1.2) (2020-04-27)
 
 
