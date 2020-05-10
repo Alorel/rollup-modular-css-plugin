@@ -95,8 +95,10 @@ __metadata:
     "@semantic-release/git": ^9.0.0
     "@semantic-release/github": ^7.0.5
     "@semantic-release/npm": ^7.0.5
+    "@types/lodash": ^4.14.150
     "@types/node": ^13.13.5
     custom-tslint-formatters: ^2.4.0
+    lodash: ^4.17.15
     rollup: ^2.9.0
     semantic-release: ^17.0.7
     tslib: ^1.11.2
@@ -570,6 +572,13 @@ __metadata:
     "@types/minimatch": "*"
     "@types/node": "*"
   checksum: 2/f74ae67cb205302da0d452e925529f817a253c4dce5d59ae6077d592238b921db750da143b8a5f8427a5011e202937d8a7b264f7d14b0ddc7f8137ca5e1af1b6
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:^4.14.150":
+  version: 4.14.150
+  resolution: "@types/lodash@npm:4.14.150"
+  checksum: 2/0e9ade0b8ace23845ffb1d17b91142abae183c997a96072339cc1ab34395e2f8bc20ad472b9efd879a8b11ee06ae9dde1b9c4c15ce2f63cbee3a558c30a7852d
   languageName: node
   linkType: hard
 
